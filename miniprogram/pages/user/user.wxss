@@ -1,0 +1,23 @@
+
+.container{
+  /*  height: 200vh;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;/*水平方向居中*/
+  /*justify-content: space-around;垂直方向分散布局*/
+
+}
+
+.img{
+  margin-top: 5px;
+  margin-bottom: 20px;
+  width:200rpx;
+  height:200rpx;
+  border-radius: 100rpx;
+}
+
+.name{
+  font-size: 50rpx;
+  margin: 20px;
+  color: #3CB371;
+}

@@ -1,0 +1,2 @@
+/* miniprogram/pages/store/medicdetail/medicdetail.wxss */
+@import "../../../style/detail.wxss"

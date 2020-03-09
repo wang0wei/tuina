@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/store/store",
+    "pages/user/user",
+    "pages/massagist/massagist",
+    "pages/store/tuinaDetail/tuinaDetail",
+    "pages/store/medicDetail/medicDetail",
+    "pages/store/sidelineDetail/sidelineDetail",
+    "pages/store/commentDetail/commentDetail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "邵儿推拿",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabber/b.png",
+        "selectedIconPath": "images/tabber/a.png",
+        "color": "white",
+        "selectcolor": "#3cb371"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "商品",
+        "iconPath": "images/tabber/store.png",
+        "selectedIconPath": "images/tabber/store1.png",
+        "color": "white",
+        "selectcolor": "#3cb371"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "images/tabber/wo.png",
+        "selectedIconPath": "images/tabber/wode.png",
+        "color": "white",
+        "selectcolor": "#3cb371"
+      }
+    ]
+  }
+}

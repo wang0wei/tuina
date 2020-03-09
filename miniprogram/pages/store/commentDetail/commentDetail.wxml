@@ -1,0 +1,15 @@
+<!--miniprogram/pages/store/commentDetail/commentDetail.wxml-->
+<view class="container" wx:for='{{comments}}' wx:key='index'>
+  <view class="container-item">
+    <text>匿名用户</text>
+    <text wx:if='{{item.Ccontent}}' class="container-item-text">{{item.Ccontent}}</text>
+    <view class="container-item-img" wx:if='{{item.Cimages}}'>
+      <block wx:for='{{item.Cimages}}' wx:key='index'>
+        <image wx:if='{{item}}' src='{{item}}'></image>
+      </block>
+    </view>
+    <view wx:if='{{item.Coverall}}' class="container-item-coverall">评分：<van-rate readonly value="{{item.Coverall}}" icon="like" void-icon="like-o" /></view>
+    <text wx:if='{{item.CDate}}' class="container-item-date">{{item.CDate}}</text>
+   
+  </view>
+</view>

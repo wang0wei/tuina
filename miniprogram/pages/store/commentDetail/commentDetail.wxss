@@ -1,0 +1,8 @@
+/* miniprogram/pages/store/commentDetail/commentDetail.wxss */
+.container{background-color: #F0F0F0;}
+.container-item{background-color: white;display: flex;flex-direction: column;justify-content: space-around;align-self: flex-start;box-sizing:border-box;margin-bottom: 10rpx;padding: 15rpx;width: 100%;}
+.container-item-img{display: flex;flex-direction: row;}
+.container-item-img image{width: 200rpx;height: 150rpx;margin-right: 5rpx;}
+.container-item-text{word-break: break-all;word-wrap: break-word;margin: 10rpx 0;font-size: 11pt;}
+.container-item-coverall{display: flex;flex-direction: row;align-content: flex-start;margin: 10rpx 0;}
+.container-item-date{color:#8e8e8e;font-size:12px;}

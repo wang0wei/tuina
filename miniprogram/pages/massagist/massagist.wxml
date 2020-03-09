@@ -1,0 +1,7 @@
+<view>    
+  <image  src="{{item.item_img}}"></image>
+  <text>{{item.item_name}}</text>
+  <text>{{item.item_describe}}</text>
+  <text>{{item.item_price}}  </text>
+  <text>{{item.item_num}}人已付款</text>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-search": "@vant/weapp/search",
+    "van-divider": "@vant/weapp/divider",
+    "van-tab": "@vant/weapp/tab",
+    "van-tabs": "@vant/weapp/tabs"
+  }
+}

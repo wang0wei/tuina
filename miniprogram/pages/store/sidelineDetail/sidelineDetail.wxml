@@ -1,0 +1,37 @@
+<!--miniprogram/pages/store/sidelinedetail/sidelinedetail.wxml-->
+<view class="item-top">
+  <image wx:if="{{detail.SidelineImage}}" src="{{detail.SidelineImage}}"></image>
+  <view class="item-top-detail">
+    <text>{{detail.SidelineName}}</text>
+    <text>{{detail.SidelineBriefIntro}}</text>
+    <text class="item-top-detail-price">¥{{detail.SidelinePrice}}<text class="item-top-detail-num">{{detail.SidelineNum}}人付款</text></text>
+  </view>
+</view>
+
+<!--评论-->
+<view class="comments" wx:if='{{comments.length}}'>
+  <view class="comments-top">
+    <text>商品评价({{comments.length}})</text>
+    <text style="color:#3CB371;" bindtap="handleDetail">查看全部 <text class="iconfont iconarrow-right"></text></text>
+  </view>
+  <view class="comments-detail">
+    <text style="color:#8e8e8e;font-size:12px;margin:5px 0;">匿名用户</text>
+    <text>{{comments[0].Ccontent}}</text>
+    <text style="color:#8e8e8e;font-size:12px;margin:5px 0 0;">{{comments[0].CDate}}</text>
+  </view>
+</view>
+<view wx:else class="comments">暂无评价</view>
+
+<view class="divider-container">
+  <van-divider contentPosition="center" customStyle="color: black;border-color:#BEBEBE;width:50%;margin-left:25%;height:5px;">宝贝详情</van-divider>
+</view>
+
+<view wx:if="{{detail.SidelineDetailIntro}}" wx:for="{{detail.SidelineDetailIntro}}" wx:key="index" class="detail">
+  <image wx:if="{{item}}" src="{{item}}"></image>
+</view>
+
+<van-goods-action>
+  <van-goods-action-icon class="goods-action-icon" icon="like-o" text="收藏" />
+  <van-goods-action-button  color="#3CB371" size="small" text="加入订单"/>
+  <van-goods-action-button plain color="#3CB371" size="small" text="立即购买" />
+</van-goods-action>

@@ -1,0 +1,15 @@
+.item-top{background-color: #3CB371;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;display: flex;flex-direction: column;}
+.item-top image{width: 90%;margin: 10px;align-self: center;}
+.item-top-detail{background-color: white;border-radius: 10px;padding:10px;margin-bottom: 12px;display: flex;flex-direction: column;}
+.item-top-detail-price{color:red;}
+.item-top-detail-num{font-size:10px;color:#8e8e8e;margin-left: 20rpx;}
+
+.comments{background-color: white;border: 1px solid #d0d0d0;margin-top: 10px;padding: 10px;}
+.comments-top{display: flex;justify-content: space-between;}
+.comments-detail{display: flex;flex-direction: column;}
+
+.detail{display: flex;flex-direction: column;justify-content: center;align-content: center;border: 1px solid #d0d0d0;}
+.detail image{width: 95%;margin: 3px;}
+
+.goods-action-icon{margin: 0 40rpx;}
+

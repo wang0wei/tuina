@@ -1,0 +1,78 @@
+<wxs src="../../utils/wordSplit.wxs" module="m1" />
+
+<!--上半部分-->
+<view class="summit">
+  <!--搜索框-->
+  <view class="summit-search-custom">
+    <van-search value="{{ value }}" background="#3CB371" shape="round" field-class="summit-search-field" placeholder="请输入搜索关键词" />
+  </view>
+  <!--订单-->
+  <view class="summit-dingdan">
+    <text class="iconfont iconicon---copy"></text>
+    <text>订单</text>
+  </view>
+</view>
+<!--轮播图-->
+<view class="summit-swiper-background">
+  <swiper class="summit-swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="divider">
+    <van-divider contentPosition="center" customStyle="color:black;border-color:black;line-height:3px;font-weight:bold;">全部商品</van-divider>
+  </view>
+
+</view>
+<!--选项卡-->
+<van-tabs active="{{active}}" animated sticky color="#3CB371" bind:click="onClick">
+  <van-tab title="技师" name="TuinaData">
+    <view class="list">
+      <view class="item" wx:for="{{listData}}" wx:key="index">
+        <image wx:if='{{item.TuinaImage}}' mode="aspectFill" src="{{item.TuinaImage}}" data-id="{{item._id}}" bindtap="handleTuinaDetail"></image>
+        <view class="item-text">
+          <text>{{item.TuinaName}}<text class="item-text-grade">[{{item.TuinaGrade}}]</text></text>
+          <text class="item-text-brief">{{m1.wordSplit(item.TuinaBriefIntro)}}</text>
+        </view>
+        <view class="item-bottom">
+          <text class="item-bottom-price">¥{{item.TuinaPrice}}<text class="item-bottom-num">{{item.TuinaNum}}人付款</text></text>
+          <text class="iconfont icontianjia" style="color:#3CB371;"></text>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="药品" name="MedicineData">
+    <view class="list">
+      <view class="item" wx:for="{{listData}}" wx:key="index">
+        <image wx:if='{{item.MedicImage}}' mode="aspectFill" src="{{item.MedicImage}}" data-id="{{item._id}}" bindtap="handleMedicDetail"></image>
+        <view class="item-text">
+          <text>{{item.MedicName}}</text>
+          <text class="item-text-brief">{{m1.wordSplit(item.MedicBriefIntro)}}</text>
+        </view>
+        <view class="item-bottom">
+          <text class="item-bottom-price">¥{{item.MedicPrice}}<text class="item-bottom-num">{{item.MedicSales}}人付款</text></text> 
+          <text class="iconfont icontianjia" style="color:#3CB371;"></text>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="其他" name="SidelineData">
+    <view class="list">
+      <view class="item" wx:for="{{listData}}" wx:key="index">
+        <image wx:if='{{item.SidelineImage}}' mode="aspectFill" src="{{item.SidelineImage}}" data-id="{{item._id}}" bindtap="handleSidelineDetail"></image>
+        <view class="item-text">
+          <text>{{item.SidelineName}}</text>
+          <text class="item-text-brief">{{m1.wordSplit(item.SidelineBriefIntro)}}</text>
+        </view>
+        <view class="item-bottom">
+          <text class="item-bottom-price">¥{{item.SidelinePrice}}<text class="item-bottom-num">{{item.SidelineNum}}人付款</text></text>
+          <text class="iconfont icontianjia" style="color:#3CB371;"></text>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>
